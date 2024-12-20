@@ -2,10 +2,10 @@ import requests
 import time
 import random
 
-groupId = 7  # PUT UR GROUP ID
-cursor = ''  # no change dis
+groupId = 7 
+cursor = ''
 limit = 100
-sortOrder = 'Desc'  # Desc = Newest Players, Asc = Oldest Players
+sortOrder = 'Desc'
 counter = 0
 
 # 2016 - 2024 accounts
