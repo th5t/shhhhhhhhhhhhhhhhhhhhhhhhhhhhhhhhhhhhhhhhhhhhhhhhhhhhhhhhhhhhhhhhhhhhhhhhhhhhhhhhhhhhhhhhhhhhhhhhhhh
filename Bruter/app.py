@@ -4,8 +4,6 @@ import os
 import signal
 from colorama import init, Fore, Style
 
-# 12/4/2024 last updated
-
 class Sentient:
     def __init__(self, script_path, num_instances, restart_interval):
         self.script_path = script_path
