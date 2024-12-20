@@ -1,0 +1,6 @@
+requests
+colorama
+bs4
+curl_cffi
+cryptography
+discord_webhook
